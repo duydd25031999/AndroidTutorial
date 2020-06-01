@@ -1,0 +1,5 @@
+- dp :
+    mật độ điểm ảnh
+- px :
+    Mỗi thiết bị thì mức độ điểm ảnh khác nhau
+    => px sẽ không chính x
