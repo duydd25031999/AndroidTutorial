@@ -19,6 +19,12 @@ import android.widget.SeekBar;
  * A simple {@link Fragment} subclass.
  */
 public class Fragment1 extends Fragment {
+    // gán callback đc define ở activity
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        onButtonClickCallBack = (OnButtonClickCallBack) context;
+    }
 
     public interface OnButtonClickCallBack {
         public void onButtonClick(String text, int textSize);
@@ -70,12 +76,5 @@ public class Fragment1 extends Fragment {
 
             }
         });
-    }
-
-    // gán callback đc define ở activity
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        onButtonClickCallBack = (OnButtonClickCallBack) context;
     }
 }
